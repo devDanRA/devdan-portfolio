@@ -50,3 +50,96 @@ body {
     border: none;
     background: none;
 }
+
+/* HERO SECTION */
+.hero {
+    min-height: 100vh;
+    padding-top: 100px;
+    position: relative;
+    background-color: var(--negro);
+}
+
+.hero-tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 16px;
+    color: var(--rosa);
+    margin-top: 24px;
+}
+
+.hero-title {
+    font-family: 'Space Mono', monospace;
+    font-size: clamp(60px, 10vw, 120px);
+    font-weight: 700;
+    color: var(--blanco);
+    line-height: 1;
+    margin-bottom: 32px;
+}
+
+.hero-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    color: var(--gris);
+    margin-bottom: 40px;
+    max-width: 600px;
+}
+
+.btn-primary-custom {
+    font-family: 'Space Mono', monospace;
+    font-size: 14px;
+    background-color: var(--rosa);
+    color: var(--negro);
+    padding: 14px 32px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: opacity 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+    opacity: 0.8;
+    color: var(--negro);
+}
+
+.hero-code {
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    color: var(--rosa);
+    opacity: 0.5;
+    position: absolute;
+    bottom: 40px;
+    right: 80px;
+}
+
+/* CARRUSEL */
+.carrusel-section {
+    background-color: var(--negro-sec);
+}
+
+.carrusel-img {
+    height: 500px;
+    object-fit: cover;
+    width: 100%;
+    will-change: transform;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: brightness(0) saturate(100%) invert(51%) sepia(69%) saturate(500%) hue-rotate(295deg) brightness(101%);
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: var(--gris) !important;
+    width: 8px !important;
+    height: 8px !important;
+    border-radius: 50% !important;
+    border: none !important;
+    opacity: 1 !important;
+}
+
+.carousel-indicators .active {
+    background-color: var(--rosa) !important;
+}
