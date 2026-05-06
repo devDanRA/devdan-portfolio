@@ -1,11 +1,186 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <title>DevDan-Portfolio</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevDan | Contacto</title>
+    <link rel="icon" type="image/png" href="../Assets/Brand/favicon.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../Css/style.css">
 </head>
+
 <body>
-    
+
+    <!-- NAV -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid px-5">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../Assets/Brand/Logo-2.svg" alt="DevDan Logo" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-4">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">01/ Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="galeria.html">02/ Galería</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contacto.html">03/ Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- CONTACTO -->
+    <main class="contacto-main">
+        <div class="container-fluid px-5 py-5">
+
+            <h1 class="section-tag mb-5">// Contacto</h1>
+
+            <div class="row g-5">
+
+                <!-- FORMULARIO -->
+                <div class="col-lg-6">
+                    <p class="contacto-subtitulo">¿Tienes un proyecto en mente?</p>
+
+                    <form id="formulario-contacto" novalidate>
+
+                        <div class="mb-4">
+                            <label for="nombre" class="form-label-custom">Nombre</label>
+                            <input type="text" id="nombre" class="input-custom" placeholder="// Escribe tu nombre">
+                            <span class="error-msg" id="error-nombre"></span>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="apellidos" class="form-label-custom">Apellidos</label>
+                            <input type="text" id="apellidos" class="input-custom"
+                                placeholder="// Escribe tus apellidos">
+                            <span class="error-msg" id="error-apellidos"></span>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="email" class="form-label-custom">Email</label>
+                            <input type="email" id="email" class="input-custom" placeholder="// tucorreo@email.com">
+                            <span class="error-msg" id="error-email"></span>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="telefono" class="form-label-custom">Teléfono</label>
+                            <input type="tel" id="telefono" class="input-custom" placeholder="// 612345678">
+                            <span class="error-msg" id="error-telefono"></span>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="comentarios" class="form-label-custom">Comentarios</label>
+                            <textarea id="comentarios" class="input-custom" rows="4"
+                                placeholder="// Cuéntame tu proyecto..."></textarea>
+                        </div>
+
+                        <div class="d-flex gap-3">
+                            <button type="submit" class="btn-primary-custom">ENVIAR</button>
+                            <button type="reset" class="btn-secondary-custom">LIMPIAR</button>
+                        </div>
+
+                    </form>
+                </div>
+
+                <!-- MAPA -->
+                <div class="col-lg-6">
+                    <div id="mapa" class="mapa-container"></div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <!-- FOOTER -->
+    <footer class="footer py-5">
+        <div class="container-fluid px-5">
+            <div class="row">
+
+                <div class="col-lg-4 mb-4 mb-lg-0 footer-col">
+                    <img src="../assets/Brand/logotransparent.png" alt="DevDan" height="50" class="mb-3">
+                    <p class="footer-legal">© 2025 DevDan. Todos los derechos reservados.</p>
+                </div>
+
+                <div class="col-lg-4 mb-4 mb-lg-0 footer-col">
+                    <h3 class="footer-titulo">// Navegación</h3>
+                    <ul class="footer-nav">
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 mb-4 mb-lg-0 footer-col">
+                    <h3 class="footer-titulo">// Redes</h3>
+                    <div class="footer-redes">
+                        <a href="https://github.com/devdanra" target="_blank">
+                            <img src="../assets/icon/github.svg" alt="GitHub" height="36">
+                        </a>
+                        <a href="https://linkedin.com" target="_blank">
+                            <img src="../assets/icon/linkedin.svg" alt="LinkedIn" height="36">
+                        </a>
+                        <a href="https://instagram.com" target="_blank">
+                            <img src="../assets/icon/instagram.svg" alt="Instagram" height="36">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!--INIT MAPA-->
+    <script>
+        function initMapa() {
+            const masterD = { lat: 40.4168, lng: -3.7038 };
+
+            const mapa = new google.maps.Map(document.getElementById("mapa"), {
+                zoom: 15,
+                center: masterD,
+                styles: [
+                    { elementType: "geometry", stylers: [{ color: "#0A0A0A" }] },
+                    { elementType: "labels.text.fill", stylers: [{ color: "#FF6B9D" }] },
+                    { elementType: "labels.text.stroke", stylers: [{ color: "#0A0A0A" }] },
+                    { featureType: "road", elementType: "geometry", stylers: [{ color: "#1A1A1A" }] },
+                    { featureType: "water", elementType: "geometry", stylers: [{ color: "#000000" }] }
+                ]
+            });
+
+            new google.maps.Marker({ position: masterD, map: mapa });
+
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        const userPos = {
+                            lat: position.coords.latitude,
+                            lng: position.coords.longitude
+                        };
+                        mapa.setCenter(userPos);
+                        new google.maps.Marker({ position: userPos, map: mapa });
+                    },
+                    () => { mapa.setCenter(masterD); }
+                );
+            }
+        }
+    </script>
+
+    <!-- API de Google Maps -->
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMIIrPMXVKfg7Le0NMLSNgzxKo9bmPm5c&callback=initMapa&loading=async"></script>
+
+    <!-- Bootstrap y JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../Js/main.js"></script>
 </body>
+</body>
+
 </html>
