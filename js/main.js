@@ -41,7 +41,7 @@ function initMapa() {
         );
     }
 }
-// ===== VALIDACIÓN FORMULARIO =====
+//VALIDACIÓN FORMULARIO
 const formulario = document.getElementById('formulario-contacto');
 
 if (formulario) {
