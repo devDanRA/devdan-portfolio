@@ -159,9 +159,9 @@ body {
     font-size: 13px;
     color: var(--rosa);
     border: 1px solid var(--rosa);
-    border-radius: 4px;
     padding: 10px 20px;
-    background: transparent;
+    background: transparent !important;
+    border-radius: 4px;
 }
 
 /* ===== PROYECTOS ===== */
@@ -220,6 +220,46 @@ body {
 .btn-secondary-custom:hover {
     background-color: var(--rosa);
     color: var(--negro);
+}
+
+/* ===== PROCESO ===== */
+.proceso-section {
+    background-color: var(--negro-sec);
+}
+
+.accordion-item {
+    background-color: var(--negro);
+    border: 1px solid #2A2A2A;
+    margin-bottom: 8px;
+}
+
+.accordion-button {
+    background-color: var(--negro);
+    color: var(--blanco);
+    font-family: 'Space Mono', monospace;
+    font-size: 14px;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--negro-sec);
+    color: var(--rosa);
+    box-shadow: none;
+}
+
+.accordion-button::after {
+    filter: invert(1);
+}
+
+.accordion-button:not(.collapsed)::after {
+    filter: invert(58%) sepia(60%) saturate(600%) hue-rotate(295deg) brightness(110%);
+}
+
+.accordion-body {
+    background-color: var(--negro-sec);
+    color: #C0C0C0;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 1.8;
 }
 
 /* ===== FOOTER ===== */
