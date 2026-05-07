@@ -164,7 +164,7 @@ body {
     border-radius: 4px;
 }
 
-/* ===== PROYECTOS ===== */
+/*  PROYECTOS  */
 .proyectos-section {
     background-color: var(--negro);
 }
@@ -223,7 +223,6 @@ body {
 }
 
 /* PROCESO DE TRABAJO */
-
 .accordion-item {
     background-color: var(--negro) !important;
     border: 1px solid #2A2A2A !important;
@@ -444,7 +443,7 @@ body {
     border: 1px solid var(--rosa);
 }
 
-/* ===== RESPONSIVE MÓVIL ===== */
+/*  RESPONSIVE MÓVIL  */
 @media (max-width: 768px) {
 
     .hero {
